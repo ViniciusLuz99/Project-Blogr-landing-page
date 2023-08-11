@@ -125,20 +125,40 @@ Hero Section
   padding: 5px;
   color: var(--color-text);
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .hero-links {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-link {
-  background-color: white;
   color: var(--color-primary-text);
+  font-weight: bold;
   text-decoration: none;
+  background-color: white;
+  outline: 1px solid white;
+  margin: 10px;
   padding: 10px 20px;
   border-radius: 30px;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   -ms-border-radius: 30px;
   -o-border-radius: 30px;
+}
+.hero-link:hover{
+  background-color: var(--color-primary-hover-bg);
+  color: white;
+}
+
+.hero-link:last-child {
+   color: var(--color-text);
+   background-color: transparent;
+}
+.hero-link:last-child:hover{
+  background-color: white;
+  color: var(--color-primary-hover-bg);
 }
