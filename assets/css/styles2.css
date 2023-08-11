@@ -1,0 +1,327 @@
+@font-face {
+  font-family: "Overpass";
+  src: url("..\fonts\overpass\Overpass-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-named-instance: "Regular";
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url("..\fonts\ubuntu\Ubuntu-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Import Ubuntu Medium font using @font-face */
+@font-face {
+  font-family: "Ubuntu";
+  src: url("..\fonts\ubuntu\Ubuntu-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Import Ubuntu Bold font using @font-face */
+@font-face {
+  font-family: "Ubuntu";
+  src: url("..\fonts\ubuntu\Ubuntu-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+:root {
+  /* Primary Colors */
+  --color-primary-text: hsl(356, 100%, 66%);
+  --color-primary-hover-bg: hsl(355, 100%, 74%);
+  --color-primary-heading: hsl(208, 49%, 24%);
+
+  /* Neutral Colors */
+  --color-text: hsl(0, 0%, 100%);
+  --color-text-black: hsl(0, 0%, 9%);
+  --color-footer-text: hsl(240, 2%, 79%);
+  --color-body-copy: hsl(207, 13%, 34%);
+  --color-footer-bg: hsl(240, 10%, 16%);
+
+  /* Gradient Colors */
+  --gradient-intro-cta-mobile-start: hsl(13, 100%, 72%);
+  --gradient-intro-cta-mobile-end: hsl(353, 100%, 62%);
+  --gradient-body-start: hsl(237, 17%, 21%);
+  --gradient-body-end: hsl(237, 23%, 32%);
+}
+
+/* Reset CSS básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+/* Reset*/
+body,
+h1,
+h2,
+h3,
+p,
+a {
+  margin: 0;
+  padding: 0;
+}
+/* flexbox*/
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Ubuntu", sans-serif;
+}
+
+/*
+Estilos gerais
+-------------
+*/
+#header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-width: 100%;
+  min-height: 70vh;
+  background: url(../images/bg-pattern-intro-mobile.svg),
+    linear-gradient(
+      90deg,
+      var(--gradient-intro-cta-mobile-start),
+      var(--gradient-intro-cta-mobile-end)
+    );
+  background-repeat: no-repeat;
+  background-position: right center;
+  border-radius: 0px 0px 0px 180px;
+  -webkit-border-radius: 0px 0px 0px 180px;
+  -moz-border-radius: 0px 0px 0px 180px;
+  -ms-border-radius: 0px 0px 0px 180px;
+  -o-border-radius: 0px 0px 0px 180px;
+}
+#desktop-nav {
+  display: none;
+}
+#mobile-nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+/*
+Hero Section
+*/
+#hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Overpass", sans-serif;
+  margin-block: 5rem;
+  width: 100%;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  max-width: 70%;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: var(--color-text);
+  text-align: center;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  font-weight: normal;
+  padding: 5px;
+  color: var(--color-text);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-link {
+  color: var(--color-primary-text);
+  font-weight: bold;
+  text-decoration: none;
+  background-color: white;
+  margin: 10px;
+  padding: 13px 20px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+.hero-link:hover {
+  background-color: var(--color-primary-hover-bg);
+  color: white;
+}
+
+.hero-link:last-child {
+  color: var(--color-text);
+  outline: 1px solid white;
+  background-color: transparent;
+}
+.hero-link:last-child:hover {
+  background-color: white;
+  outline: 1px solid transparent;
+  color: var(--color-primary-hover-bg);
+}
+
+/*
+sections Title/descriptions 
+*/
+
+@media (max-width: 320px) {
+}
+
+@media (min-width: 769px) {
+  #header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: url(../images/bg-pattern-intro-desktop.svg),
+      linear-gradient(
+        60deg,
+        var(--gradient-intro-cta-mobile-start),
+        var(--gradient-intro-cta-mobile-end)
+      );
+    background-size: 123%;
+    background-position: center left;
+  }
+  /*nav*/
+  #mobile-nav{
+    display: none;
+  }
+  #desktop-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+    font-weight: bold;
+    background-color: transparent;
+  }
+  #desktop-nav .nav-links,
+  #desktop-nav .nav-login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+  }
+  #desktop-nav .nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+  }
+  .nav-link,
+  .dropdown-link {
+    display: flex;
+    align-items: center;
+    color: var(--color-text);
+    text-align: left;
+    text-decoration: none;
+  }
+  .nav-link {
+    opacity: 80%;
+  }
+  #desktop-nav .nav-link:hover {
+    opacity: 100%;
+  }
+  .dropdown-link {
+    color: var(--color-text-black);
+    font-weight: normal;
+  }
+  .dropdown-link:hover {
+    font-weight: bold;
+  }
+
+  #desktop-nav .dropdown {
+    position: relative;
+    padding-block: 1rem;
+  }
+
+  /* Estilos para o submenu */
+  #desktop-nav .dropdown-content {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 0.9rem;
+    gap: 10px;
+    background-color: white;
+    list-style: none;
+    margin-top: 10px;
+    padding: 30px 60px 30px 20px;
+    width: 130px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+  }
+  .arrow-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    transition: transform 0.3s ease-in-out;
+  }
+  .dropdown:hover .arrow-icon {
+    transform: rotate(-180deg);
+  }
+
+  .dropdown:hover::before {
+    transform: translateY(-50%) rotate(-135deg);
+  }
+  #desktop-nav .dropdown:hover .dropdown-content {
+    display: flex;
+  }
+  /*login*/
+  .nav-login .nav-list a {
+    color: var(--color-text);
+    text-decoration: none;
+    opacity: 80%;
+  }
+
+  .nav-login .nav-list a:hover {
+    opacity: 100%;
+    text-decoration: underline;
+  }
+  .nav-login .nav-list .signUp:hover {
+    background-color: var(--color-primary-hover-bg);
+    color: var(--color-text);
+    text-decoration: none;
+  }
+  .nav-login .nav-list .signUp {
+    color: var(--color-primary-text);
+    font-weight: bold;
+    text-decoration: none;
+    background-color: white;
+    padding: 13px 35px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+  }
+}
