@@ -409,9 +409,11 @@ sections Title/descriptions
   line-height: 1.3;
 }
 h2.section-title {
+  font-family: "ubuntu", sans-serif;
   font-size: 1.8rem;
 }
 h3.section-title {
+  font-family: "ubuntu", sans-serif;
   font-size: 1.7rem;
   width: 80%;
   margin-bottom: 1.5rem;
@@ -421,7 +423,10 @@ h3.section-title {
   text-align: center;
 }
 .section-description {
+  font-size: 1.1rem;
   color: var(--color-body-copy);
+  font-family: "overpass", sans-serif;
+  font-weight: normal;
   width: 90%;
   line-height: 1.6;
 }
@@ -470,34 +475,45 @@ Features
 /*
 art infrastructure
 */
-#art-infrastructure-section{
-  background: url(../images/bg-pattern-circles.svg),    linear-gradient(      var(--gradient-body-start),      var(--gradient-body-end)    );
+#art-infrastructure-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(../images/bg-pattern-circles.svg),
+    linear-gradient(var(--gradient-body-start), var(--gradient-body-end));
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center top;
   padding-bottom: 3rem;
   margin-top: 220px;
-  border-radius: 0px 100px 0px 100px;
-  -webkit-border-radius: 0px 100px 0px 100px;
-  -moz-border-radius: 0px 100px 0px 100px;
-  -ms-border-radius: 0px 100px 0px 100px;
-  -o-border-radius: 0px 100px 0px 100px;
-  max-width: 100%;
+  width: 100%;
+  border-radius: 0 100px 0 100px;
+  -webkit-border-radius: 0 100px 0 100px;
+  -moz-border-radius: 0 100px 0 100px;
+  -ms-border-radius: 0 100px 0 100px;
+  -o-border-radius: 0 100px 0 100px;
 }
-#art-infrastructure-section img{
+#art-infrastructure-section img {
   margin-top: -184px;
   padding-top: -90px;
   width: 100%;
+  max-width: 500px;
 }
-.art-infrastructure-text h3, .art-infrastructure-text p{
+.art-infrastructure-text h3,
+.art-infrastructure-text p {
   color: var(--color-text);
   width: 80%;
 }
 
 .art-infrastructure-text h3 {
-  font-size: 2rem;
+  font-size: 2.3rem;
 }
-
+.art-infrastructure-text p{
+  font-family: "overpass";
+  font-weight: lighter;
+  opacity: 95%;
+}
 .art-infrastructure-text {
   padding-bottom: 5rem;
 }
@@ -602,10 +618,20 @@ art infrastructure
   .section-container {
     display: flex;
     flex-direction: row;
-    width: 90%;
-    max-width: 1200px;
+    width: 100%;
+    /* max-width: 1200px; */
     margin: 0 auto;
   }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin: 0 auto; */
+    width: 100%;
+  }
+
   .section-title,
   .section-description {
     text-align: left;
@@ -639,8 +665,8 @@ art infrastructure
     width: 100%;
     margin: 0 auto;
     flex-direction: row-reverse;
-
     gap: 0;
+    margin-bottom: 5rem;
   }
   .features-image {
     display: flex;
@@ -655,5 +681,62 @@ art infrastructure
   .features-text-wrapper {
     width: 100%;
     max-width: 700px;
+  }
+
+  /*art infrastructure*/
+  #art-infrastructure-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: bottom;
+    padding-bottom: 3rem;
+    margin-top: 80px;
+    max-width: 100%;
+  }
+  .art-infrastructure-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-block: -150px;
+    /* max-width: 1200px; */
+  }
+  #art-infrastructure-section.section-container {
+    width: 100%;
+  }
+  .art-infrastructure-image {
+    width: 100%;
+  }
+  #art-infrastructure-section img {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 40px;
+    padding-top: 40px;
+    padding-bottom: 0px;
+  }
+
+  .art-infrastructure-text {
+    /* max-width: 600px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 0px;
+  }
+  .art-infrastructure-text h3 {
+    font-size: 2.5rem;
+  }
+  .art-infrastructure-text p{
+    font-size: 1.2rem;
+    font-family: "overpass";
+    font-weight: lighter;
+    opacity: 95%;
+  }
+  .art-infrastructure-text h3,
+  .art-infrastructure-text p {
+    width: 70%;
   }
 }
