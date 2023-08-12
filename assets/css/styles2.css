@@ -1,33 +1,31 @@
 @font-face {
   font-family: "Overpass";
-  src: url("..\fonts\overpass\Overpass-VariableFont_wght.ttf")
-    format("truetype");
+  src: url("../fonts/overpass/Overpass-VariableFont_wght.ttf") format("truetype");
   font-weight: 100 900;
   font-style: normal;
-  font-named-instance: "Regular";
 }
+
 @font-face {
   font-family: "Ubuntu";
-  src: url("..\fonts\ubuntu\Ubuntu-Regular.ttf") format("truetype");
+  src: url("../fonts/ubuntu/Ubuntu-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
-/* Import Ubuntu Medium font using @font-face */
 @font-face {
   font-family: "Ubuntu";
-  src: url("..\fonts\ubuntu\Ubuntu-Medium.ttf") format("truetype");
+  src: url("../fonts/ubuntu/Ubuntu-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 
-/* Import Ubuntu Bold font using @font-face */
 @font-face {
   font-family: "Ubuntu";
-  src: url("..\fonts\ubuntu\Ubuntu-Bold.ttf") format("truetype");
+  src: url("../fonts/ubuntu/Ubuntu-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
+
 :root {
   /* Primary Colors */
   --color-primary-text: hsl(356, 100%, 66%);
@@ -94,12 +92,15 @@ Estilos gerais
     );
   background-repeat: no-repeat;
   background-position: center center;
-  border-radius: 0px 0px 0px 100px;
-  -webkit-border-radius: 0px 0px 0px 100px;
-  -moz-border-radius: 0px 0px 0px 100px;
-  -ms-border-radius: 0px 0px 0px 100px;
-  -o-border-radius: 0px 0px 0px 100px;
+  border-radius: 0 0 0 100px;
+  -webkit-border-radius: 0 0 0 100px;
+  -moz-border-radius: 0 0 0 100px;
+  -ms-border-radius: 0 0 0 100px;
+  -o-border-radius: 0 0 0 100px;
 }
+/*
+Navbar Mobile
+*/
 #desktop-nav {
   display: none;
 }
@@ -120,28 +121,15 @@ Estilos gerais
   border: none;
   opacity: 1;
   background-color: transparent;
-  transition: 0.3s ease-in-out;
-  animation: scale 0.3s ease-in-out;
-  -webkit-animation: scale 0.3s ease-in-out;
-  -webkit-transition: 0.3s ease-in-out;
-  -moz-transition: 0.3s ease-in-out;
-  -ms-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out transform;
 }
+
 @keyframes scale {
   0% {
     transform: scale(0);
-    -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -ms-transform: scale(0);
-    -o-transform: scale(0);
   }
   100% {
     transform: scale(1);
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
   }
 }
 
@@ -175,83 +163,18 @@ Estilos gerais
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
-#mobile-nav .nav-links,
-#mobile-nav .nav-login {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-#mobile-nav .nav-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
-}
-#mobile-nav .nav-link {
-  opacity: 100%;
-}
-#mobile-nav .nav-link:is(:hover, :focus) {
-  opacity: 80%;
-}
-
 #mobile-nav .nav-link,
 #mobile-nav .dropdown-link {
-  display: flex;
   justify-content: center;
-  align-items: center;
+  text-align: center;
   font-size: 1.1rem;
   font-weight: bold;
   color: var(--color-text-black);
-  text-align: left;
-  text-decoration: none;
 }
-
-
-#mobile-nav .dropdown {
-  position: relative;
-  padding-block: 1rem;
-}
-/* Estilos para o submenu */
 #mobile-nav .dropdown-content {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #e6e6e6b6;
-  gap: 10px;
-  font-size: 1rem;
-  list-style: none;
-  margin: 0 auto;
-  margin-top: 10px;
-  padding: 25px 0;
-  width: 350px;
   max-width: 90%;
-  border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
 }
 
-#mobile-nav .arrow-icon {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-left: 5px;
-  transition: transform 0.3s ease-in-out;
-}
-#mobile-nav .dropdown:is(:hover, :focus) .arrow-icon {
-  transform: rotate(-180deg);
-}
-
-#mobile-nav .dropdown:is(:hover, :focus):before {
-  transform: translateY(-50%) rotate(-135deg);
-}
-#mobile-nav .dropdown:is(:hover, :focus) .dropdown-content {
-  display: flex;
-}
 #mobile-nav .dropdown-link {
   margin: 0.2rem;
   opacity: 70%;
@@ -308,6 +231,79 @@ Estilos gerais
   -o-border-radius: 30px;
 }
 /*
+Navbar geral
+*/
+.nav-links,
+.nav-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+.nav-link {
+  opacity: 100%;
+}
+.nav-link:is(:hover, :focus) {
+  opacity: 80%;
+}
+.nav-link,
+.dropdown-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.arrow-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.dropdown {
+  position: relative;
+  padding-block: 1rem;
+}
+/* Estilos para o submenu */
+.dropdown-content {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  width: 350px;
+  font-size: 1rem;
+  background-color: #e6e6e6b6;
+  padding: 25px 0;
+  margin: 0 auto;
+  margin-top: 10px;
+  list-style: none;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.dropdown:is(:hover, :focus) .arrow-icon {
+  transform: rotate(-180deg);
+}
+
+.dropdown:is(:hover, :focus):before {
+  transform: translateY(-50%) rotate(-135deg);
+}
+.dropdown:is(:hover, :focus) .dropdown-content {
+  display: flex;
+}
+
+/*
 Hero Section
 */
 #hero-section {
@@ -316,7 +312,7 @@ Hero Section
   justify-content: center;
   align-items: center;
   font-family: "Overpass", sans-serif;
-  margin-block: 5rem;
+  margin-block: 5rem 0;
   width: 100%;
 }
 
@@ -391,10 +387,6 @@ sections Title/descriptions
 
 @media (min-width: 1000px) {
   #header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
     background: url(../images/bg-pattern-intro-desktop.svg),
       linear-gradient(
         60deg,
@@ -419,33 +411,25 @@ sections Title/descriptions
   }
   .nav-links,
   .nav-login {
-    display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     gap: 5rem;
   }
   .nav-list {
-    display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     gap: 2rem;
-    list-style: none;
-  }
-  .nav-link,
-  .dropdown-link {
-    display: flex;
-    align-items: center;
-    color: var(--color-text);
-    text-align: left;
-    text-decoration: none;
   }
   .nav-link {
     opacity: 80%;
   }
-  .nav-link:hover {
+  .nav-link:is(:hover, :focus) {
     opacity: 100%;
+    text-decoration: underline;
+  }
+  .nav-link,
+  .dropdown-link {
+    color: var(--color-text);
+    text-align: left;
+    text-decoration: none;
   }
   .dropdown-link {
     color: var(--color-text-black);
@@ -455,48 +439,15 @@ sections Title/descriptions
     font-weight: bold;
   }
 
-  .dropdown {
-    position: relative;
-    padding-block: 1rem;
-  }
-
   /* Estilos para o submenu */
-  #desktop-nav .dropdown-content {
+  .dropdown-content {
     position: absolute;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 0.9rem;
-    gap: 10px;
     background-color: white;
-    list-style: none;
-    margin-top: 10px;
+    font-size: 0.9rem;
     padding: 30px 60px 30px 20px;
     width: 130px;
-    border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
-  }
-  .arrow-icon {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 5px;
-    transition: transform 0.3s ease-in-out;
-  }
-  .dropdown:hover .arrow-icon {
-    transform: rotate(-180deg);
   }
 
-  .dropdown:hover::before {
-    transform: translateY(-50%) rotate(-135deg);
-  }
-  #desktop-nav .dropdown:hover .dropdown-content {
-    display: flex;
-  }
   /*login*/
   .nav-login .nav-list a {
     color: var(--color-text);
@@ -528,6 +479,9 @@ sections Title/descriptions
 
   /* */
   .hero-title {
-    font-size: 3rem;
+    font-size: 4rem;
+  }
+  .hero-description{
+    font-size: 1.4rem;
   }
 }
