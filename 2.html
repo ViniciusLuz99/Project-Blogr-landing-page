@@ -12,7 +12,67 @@
         <div class="nav-logo">
           <img src="./assets/images/logo.svg" alt="Logo" />
         </div>
-        <button class="openbtn" onclick="openNav()">&#9776;</button>
+        <button class="openbtn" onclick="navToggler()">
+          <img src="./assets/images/icon-hamburger.svg" alt="hamburgher" />
+        </button>
+        <button class="closebtn" onclick="navToggler()">
+          <img src="./assets/images/icon-close.svg" alt="hamburgher" />
+        </button>
+        <div id="mobile-menu">
+          <ul class="nav-list">
+            <li class="dropdown">
+              <a href="#" class="nav-link"
+                >Product<span
+                  ><img
+                    class="arrow-icon"
+                    src="./assets/images/icon-arrow-dark.svg"
+                    alt="arrow" /></span
+              ></a>
+              <ul class="dropdown-content">
+                <li><a href="#" class="dropdown-link">Overview</a></li>
+                <li><a href="#" class="dropdown-link">Pricing</a></li>
+                <li><a href="#" class="dropdown-link">Marketplace</a></li>
+                <li><a href="#" class="dropdown-link">Features</a></li>
+                <li><a href="#" class="dropdown-link">Integrations</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="nav-link"
+                >Company<span
+                  ><img
+                    class="arrow-icon"
+                    src="./assets/images/icon-arrow-dark.svg"
+                    alt="arrow" /></span
+              ></a>
+              <ul class="dropdown-content">
+                <li><a href="#" class="dropdown-link">About</a></li>
+                <li><a href="#" class="dropdown-link">Team</a></li>
+                <li><a href="#" class="dropdown-link">Blog</a></li>
+                <li><a href="#" class="dropdown-link">Careers</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="nav-link"
+                >Connect<span
+                  ><img
+                    class="arrow-icon"
+                    src="./assets/images/icon-arrow-dark.svg"
+                    alt="arrow" /></span
+              ></a>
+              <ul class="dropdown-content">
+                <li><a href="#" class="dropdown-link">Contact</a></li>
+                <li><a href="#" class="dropdown-link">Newsletter</a></li>
+                <li><a href="#" class="dropdown-link">LinkedIn</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="nav-login">
+            <nav class="nav-list">
+              <a href="#">Login</a>
+              <a href="#" class="signUp">Sign Up</a>
+            </nav>
+          </div>
+        </div>
       </nav>
       <nav id="desktop-nav">
         <div class="nav-links">
@@ -80,7 +140,7 @@
           <p class="hero-description">
             Grow your audience and build your online brand
           </p>
-          <div hero-links>
+          <div class="hero-links">
             <a class="hero-link">Start for Free</a>
             <a class="hero-link">Learn More</a>
           </div>
@@ -88,39 +148,8 @@
       </section>
     </header>
     <main>
-      <section class="container" id="features-section">
-        <div class="section-container feature">
-          <h2 class="section-title">Designed for the future</h2>
-          <picture>
-            <source
-              media="(min-width: 768px)"
-              srcset="./assets/images/illustration-editor-desktop.svg"
-            />
-            <img
-              src="./assets/images/illustration-editor-mobile.svg"
-              alt="illustration-editor-mobile"
-            />
-          </picture>
-          <h2 class="section-title">Introducing an extensible editor</h2>
-          <p class="section-description">
-            Blogr features an exceedingly intuitive interface which lets you
-            focus on one thing: creating content. The editor supports management
-            of multiple blogs and allows easy manipulation of embeds such as
-            images, videos, and Markdown. Extensibility with plugins and themes
-            provide easy ways to add functionality or change the looks of a
-            blog.
-          </p>
-        </div>
-        <div class="section-container content-management">
-          <h2 class="section-title">Robust content management</h2>
-          <p class="section-description">
-            Flexible content management enables users to easily move through
-            posts. Increase the usability of your blog by adding customized
-            categories, sections, format, or flow. With this functionality,
-            you’re in full control.
-          </p>
-        </div>
-      </section>
+     
     </main>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>
