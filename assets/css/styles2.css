@@ -471,7 +471,6 @@ Features
   width: 90%;
   /* max-width: 1200px; */
 }
-
 /*
 art infrastructure
 */
@@ -509,7 +508,7 @@ art infrastructure
 .art-infrastructure-text h3 {
   font-size: 2.3rem;
 }
-.art-infrastructure-text p{
+.art-infrastructure-text p {
   font-family: "overpass";
   font-weight: lighter;
   opacity: 95%;
@@ -517,7 +516,23 @@ art infrastructure
 .art-infrastructure-text {
   padding-bottom: 5rem;
 }
-
+/*
+Opensource section
+*/
+#open-source-section {
+  margin-top: 5rem;
+}
+.open-source-image {
+  width: 99%;
+}
+.open-source-image img {
+  width: 100%;
+  max-width: 800px;
+}
+.features-text {
+  width: 85%;
+}
+/*media queries*/
 @media (max-width: 320px) {
 }
 
@@ -729,7 +744,7 @@ art infrastructure
   .art-infrastructure-text h3 {
     font-size: 2.5rem;
   }
-  .art-infrastructure-text p{
+  .art-infrastructure-text p {
     font-size: 1.2rem;
     font-family: "overpass";
     font-weight: lighter;
@@ -738,5 +753,10 @@ art infrastructure
   .art-infrastructure-text h3,
   .art-infrastructure-text p {
     width: 70%;
+  }
+  /* Opensource section */
+  .open-source-text-wrapper {
+    max-width: 600px;
+    margin-right: 14rem;
   }
 }
