@@ -890,7 +890,7 @@ footer nav
 @media (min-width: 2286px) {
   #art-infrastructure-section {
     padding-inline: 10rem;
-    overflow-x: hidden;
-    overflow-y: visible;
+    /* overflow-x: hidden;
+    overflow-y: visible; */
   }
 }
