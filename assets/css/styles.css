@@ -891,5 +891,6 @@ footer nav
   #art-infrastructure-section {
     padding-inline: 10rem;
     overflow-x: hidden;
+    overflow-y: visible;
   }
 }
