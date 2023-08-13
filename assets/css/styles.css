@@ -122,9 +122,13 @@ Navbar Mobile
   border: none;
   opacity: 1;
   background-color: transparent;
-  transition: 0.3s ease-in-out transform;
+  transition: 0.3s ease-in-out;
   animation: scale 0.3s ease-in-out;
   -webkit-animation: scale 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
 }
 
 @keyframes scale {
@@ -176,6 +180,11 @@ Navbar Mobile
 }
 #mobile-nav .dropdown-content {
   max-width: 90%;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
 }
 
 #mobile-nav .dropdown-link {
@@ -205,6 +214,11 @@ Navbar Mobile
   text-decoration: none;
   padding: 13px 35px;
   margin-block: 10px;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
 }
 #mobile-nav .nav-login .nav-list a:hover {
   opacity: 100%;
@@ -261,6 +275,11 @@ Navbar geral
   display: flex;
   align-items: center;
   text-decoration: none;
+  transition: 0.2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -ms-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
 }
 
 .arrow-icon {
@@ -269,7 +288,11 @@ Navbar geral
   justify-content: center;
   align-items: center;
   margin-left: 5px;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  -webkit-transition: transform 0.2s ease-in-out;
+  -moz-transition: transform 0.2s ease-in-out;
+  -ms-transition: transform 0.2s ease-in-out;
+  -o-transition: transform 0.2s ease-in-out;
 }
 
 .dropdown {
@@ -365,6 +388,11 @@ Hero Section
   -moz-border-radius: 30px;
   -ms-border-radius: 30px;
   -o-border-radius: 30px;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
 }
 .hero-link:hover {
   background-color: var(--color-primary-hover-bg);
@@ -612,7 +640,7 @@ footer nav
 @media (max-width: 320px) {
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   #header {
     background: url(../images/bg-pattern-intro-desktop.svg),
       linear-gradient(
@@ -680,6 +708,11 @@ footer nav
     color: var(--color-text);
     text-decoration: none;
     opacity: 80%;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
   }
 
   .nav-login .nav-list a:hover {
@@ -852,5 +885,11 @@ footer nav
     display: flex;
     flex-direction: column;
     align-items: stretch;
+  }
+}
+@media (min-width: 2286px) {
+  #art-infrastructure-section {
+    padding-inline: 10rem;
+    overflow-x: hidden;
   }
 }
